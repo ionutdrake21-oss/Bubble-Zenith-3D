@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bubble Tower 3D</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			background-color: #333;
+		}
+
+		#gameContainer {
+			width: 100%;
+			height: 100%;
+		}
+
+		#game-iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="gameContainer">
+		<iframe id="game-iframe" src="" allow="autoplay"></iframe>
+	</div>
+
+	<script>
+		(function(){
+			const packageId = "bubble-tower-3d";
+			let affiliateId = "A1000-10";
+
+			if (affiliateId === "A1000-10") {
+				affiliateId += (Math.random() >= 0.5) ? "A" : "B";
+			}
+
+			const iframe = document.getElementById("game-iframe");
+			if (iframe) {
+				iframe.src = 'https://play.famobi.com/' + packageId + "/" + affiliateId;
+			}
+		})();
+	</script>
+</body>
+</html>
